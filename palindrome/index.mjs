@@ -8,4 +8,19 @@
 // palindrome("abba") === true
 // palindrome("abcdefg") === false
 
-export const palindrome = (str) => {};
+export const palindrome = (str) => {
+  let backwardStr = "";
+
+  for (let i = 0; i < str.length; i++) {
+    backwardStr = backwardStr + str[str.length - i - 1];
+    console.log(backwardStr);
+  }
+
+  if (str.toLowerCase() === backwardStr.toLowerCase()) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+console.log(palindrome("aaaa"));
